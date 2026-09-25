@@ -207,6 +207,34 @@
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <!-- GoatCounter: replace "vutov" with your own GoatCounter code -->
+    <script>
+    // Count a visit only if it's a real browser and the page stays open for 3 seconds
+    window.goatcounter = { no_onload: true };
+    window.addEventListener('load', function () {
+      if (navigator.webdriver) return;
+      setTimeout(function () {
+        if (document.visibilityState === 'visible' && window.goatcounter.count) {
+          window.goatcounter.count({ path: location.pathname });
+        }
+      }, 3000);
+    });
+  </script>
   <script data-goatcounter="https://vutov.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+    // Record how far people scroll: one event per section, first time it's seen
+    if (!navigator.webdriver && 'IntersectionObserver' in window) {
+      var seen = {};
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var id = e.target.id;
+          if (e.isIntersecting && !seen[id] && window.goatcounter && window.goatcounter.count) {
+            seen[id] = true;
+            window.goatcounter.count({ path: 'seen-' + id, title: 'Scrolled to ' + id, event: true });
+          }
+        });
+      }, { threshold: 0.4 });
+      document.querySelectorAll('section[id]').forEach(function (s) { io.observe(s); });
+    }
+  </script>
 </body>
 </html>
