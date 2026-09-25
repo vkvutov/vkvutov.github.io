@@ -102,7 +102,21 @@ section > .wrap > p + p { margin-top: 14px; }
   font-size: 14px; color: var(--muted);
   padding: 5px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
 }
-.status .dot { width: 8px; height: 8px; border-radius: 50%; background: #2fb344; box-shadow: 0 0 0 3px rgba(47,179,68,.18); }
+.status .dot {
+  width: 8px; height: 8px; border-radius: 50%; background: #2fb344;
+  box-shadow: 0 0 0 3px rgba(47,179,68,.18);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1;   box-shadow: 0 0 0 3px rgba(47,179,68,.18); }
+  50%      { opacity: .45; box-shadow: 0 0 0 6px rgba(47,179,68,0); }
+}
+
+/* No animation for visitors who have turned off motion in their system settings */
+@media (prefers-reduced-motion: reduce) {
+  .status .dot { animation: none; }
+}
 
 /* Experience timeline */
 .timeline { list-style: none; display: grid; gap: 26px; }
