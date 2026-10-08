@@ -57,12 +57,12 @@
       <div class="wrap">
         <h2>About</h2>
           <p>My work sits where machine learning meets engineering. I care about choosing models
-          for good reasons: interpretable GAMs over black boxes when inspection matters,
+          for good reasons: Interpretable GAMs over black boxes when inspection matters,
           proper hypothesis tests for drift, and held-out test sets that stay untouched until the
           very end. I also insist on wrapping models in config-driven, tracked, containerized pipelines.</p>
 
         <p>My PhD research focused on developing novel analytical methods for matrix-assisted
-  laser desorption/ionization mass spectrometry imaging (MALDI-MSI) data. I'm particularly
+  laser desorption/ionization mass spectrometry imaging (MALDI-MSI) data. I am particularly
   interested in interpretable models, uncertainty quantification, boosting methods, and
   causal inference.</p>
 
@@ -82,6 +82,7 @@
           <span>RAG</span><span>FAISS</span><span>Weaviate</span><span>Ollama</span>
           <span>MLflow</span><span>W&amp;B</span><span>Hydra</span><span>FastAPI</span>
           <span>Docker</span><span>Prometheus</span><span>Grafana</span><span>R</span>
+          <span>dbt</span><span>DuckDB</span><span>Airflow</span><span>SQL</span>.
         </div>
       </div>
     </section>
@@ -166,6 +167,24 @@
                 tracking and champion/challenger registry, FastAPI serving, drift detection with an
                 Anderson-Darling test and a two-proportion Z-test, and live Prometheus + Grafana dashboards.</p>
               <div class="tags"><span>pygam</span><span>MLflow</span><span>FastAPI</span><span>Docker</span><span>Grafana</span></div>
+            </div>
+          </a>
+
+
+          <a class="project" href="https://github.com/fisherynwa/ecb-fx-pipeline" data-goatcounter-click="project-ecb-fx">
+            <div class="thumb"><img src="https://raw.githubusercontent.com/fisherynwa/ecb-fx-pipeline/main/figures/dashboard.png" alt="Streamlit dashboard of ECB euro exchange rates" loading="lazy"></div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>ECB Exchange-Rate Pipeline</h3>
+                <span class="repo mono">ecb-fx-pipeline</span>
+              </div>
+              <p>A daily data pipeline for the European Central Bank's euro reference rates, with no
+                database server. Python ingests the raw data into DuckDB, dbt builds and tests
+                bronze → silver → gold layers (daily returns, 20-day volatility, monthly averages),
+                Airflow schedules weekday runs, and a Streamlit dashboard reads the gold layer.
+                Idempotent steps, lineage on every row, and tests that gate what reaches the dashboard.</p>
+              <div class="metric mono">21 unit tests · 10 dbt data tests · CI on GitHub Actions</div>
+              <div class="tags"><span>DuckDB</span><span>dbt</span><span>Airflow</span><span>Streamlit</span><span>Docker</span></div>
             </div>
           </a>
 
