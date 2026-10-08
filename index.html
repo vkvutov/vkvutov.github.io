@@ -11,9 +11,34 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Vladimir Vutov, PhD">
   <meta property="og:description" content="Machine learning, statistics and MLOps: RAG systems, model fine-tuning and end-to-end pipelines.">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/89644500?v=4">
+  <meta property="og:image" content="https://vkvutov.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://vkvutov.github.io/">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tells search engines who this page is about -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vladimir Vutov",
+    "honorificSuffix": "PhD",
+    "jobTitle": "Machine Learning Scientist",
+    "url": "https://vkvutov.github.io/",
+    "image": "https://avatars.githubusercontent.com/u/89644500?v=4",
+    "email": "mailto:vkvutov@gmail.com",
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "University of Bremen"},
+      {"@type": "CollegeOrUniversity", "name": "Sofia University St. Kliment Ohridski"}
+    ],
+    "knowsAbout": ["Machine learning", "Statistics", "MLOps", "Retrieval-augmented generation", "Data engineering"],
+    "sameAs": [
+      "https://github.com/fisherynwa",
+      "https://www.linkedin.com/in/vladimir-vutov-62aa7917a/"
+    ]
+  }
+  </script>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -26,6 +51,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Papers</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -33,15 +59,17 @@
     <div class="hero">
       <img class="avatar" src="https://avatars.githubusercontent.com/u/89644500?v=4" alt="Vladimir Vutov">
       <div class="hello mono">Hi there, my name is</div>
-      <h1>Vladimir Vutov.</h1>
+      <h1>Vladimir Vutov</h1>
+      <div class="tagline">Machine learning · Statistics · MLOps</div>
       <p>I build machine-learning systems with a statistician's eye, including
         retrieval-augmented generation, model fine-tuning, and end-to-end MLOps pipelines,
         with an emphasis on honest evaluation and reproducibility.</p>
-      <div class="status"><span class="dot"></span>Open to ML Engineering and (Applied) Data Science roles</div>
+      <div class="status"><span class="dot"></span>Open to ML engineering and applied data science roles</div>
       <div class="cta">
         <a class="btn primary" href="#projects">See my work</a>
-        <!--   <a class="btn" href="cv.pdf" download>CV ↓</a>↓</a> -->
-        <a class="btn" href="https://github.com/fisherynwa">GitHub ↗</a>
+        <!-- <a class="btn" href="cv.pdf" download>CV ↓</a> -->
+        <a class="btn" href="https://github.com/fisherynwa" data-goatcounter-click="hero-github">GitHub ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/vladimir-vutov-62aa7917a/" data-goatcounter-click="hero-linkedin">LinkedIn ↗</a>
       </div>
       <svg class="hero-plot" viewBox="0 0 720 170" role="img" aria-label="Data points with a smooth fitted curve and confidence band">
         <line class="axis" x1="10" y1="166" x2="710" y2="166"/>
@@ -57,23 +85,20 @@
       <div class="wrap">
         <h2>About</h2>
           <p>My work sits where machine learning meets engineering. I care about choosing models
-          for good reasons: Interpretable GAMs over black boxes when inspection matters,
+          for good reasons: interpretable GAMs over black boxes when inspection matters,
           proper hypothesis tests for drift, and held-out test sets that stay untouched until the
           very end. I also insist on wrapping models in config-driven, tracked, containerized pipelines.</p>
 
         <p>My PhD research focused on developing novel analytical methods for matrix-assisted
   laser desorption/ionization mass spectrometry imaging (MALDI-MSI) data. I am particularly
-  interested in interpretable models, uncertainty quantification, boosting methods, and
-  causal inference.</p>
+  interested in interpretable models, uncertainty quantification, boosting methods, and deep learning.</p>
 
         <p>Lately I've been working on LLM retrieval systems (hybrid dense + lexical
           search, contextual embeddings, LLM evaluation), systematic
-          hyperparameter tuning for vision transformers, and NLP applications.</p>
+          hyperparameter tuning for vision transformers, NLP applications, and
+          production data pipelines with dbt and Airflow.</p>
 
-        <p>A few reads and ideas that have really shaped how I think about problems:
-          Leo Breiman's classic "Two Cultures" paper, Jerome Friedman's work on gradient boosting,
-          Trevor Hastie and Robert Tibshirani's foundational work on GAMs, and Simon Wood's
-          work on smoothing and GAMs.</p>
+  
 
         <p>In my spare time: 🎣 fishing · 🥾 hiking · ⚽ football · 🎶 vinyl · 📚 novels</p>
 
@@ -82,48 +107,82 @@
           <span>RAG</span><span>FAISS</span><span>Weaviate</span><span>Ollama</span>
           <span>MLflow</span><span>W&amp;B</span><span>Hydra</span><span>FastAPI</span>
           <span>Docker</span><span>Prometheus</span><span>Grafana</span><span>R</span>
-          <span>dbt</span><span>DuckDB</span><span>Airflow</span><span>SQL</span>.
+          <span>dbt</span><span>DuckDB</span><span>Airflow</span><span>SQL</span>
         </div>
       </div>
     </section>
-<!--
     <section id="experience">
       <div class="wrap">
-        <h2>Experience &amp; Education</h2>
+        <h2>Experience</h2>
         <ol class="timeline">
           <li>
-            <div class="when mono">[2024 - now]</div>
+            <div class="when mono">May 2024 – Jun 2026</div>
             <div>
-              <div class="what">[Job title]</div>
-              <div class="where">[Company or institute], [City]</div>
-              <p>[to update.]</p>
+              <div class="what">Applied Scientist, AI/ML</div>
+              <div class="where">Heidelberg University Hospital · Heidelberg, Germany</div>
             </div>
           </li>
           <li>
-            <div class="when mono">[2019 - 2024]</div>
+            <div class="when mono">Oct 2019 – Jan 2024</div>
             <div>
-              <div class="what">PhD, [Field, e.g. Statistics]</div>
-              <div class="where">[University], [City]</div>
-              <p>[to update.]</p>
+              <div class="what">Doctoral Researcher in Statistics</div>
+              <div class="where">University of Bremen · Bremen, Germany</div>
             </div>
           </li>
           <li>
-            <div class="when mono">[2017 - 2019]</div>
+            <div class="when mono">Jun 2019 – Jul 2019</div>
             <div>
-              <div class="what">MSc, [Field]</div>
-              <div class="where">[University], [City]</div>
-              <p>[to update.]</p>
+              <div class="what">Founding Data Scientist</div>
+              <div class="where">Colibra.io · Sofia, Bulgaria</div>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">Nov 2018 – May 2019</div>
+            <div>
+              <div class="what">Founding Data Scientist</div>
+              <div class="where">Gaida.ai · Sofia, Bulgaria</div>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">Aug 2016 – Nov 2018</div>
+            <div>
+              <div class="what">Data Scientist</div>
+              <div class="where">GemSeek · Sofia, Bulgaria</div>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">Mar 2015 – Aug 2016</div>
+            <div>
+              <div class="what">Statistical Operations Specialist</div>
+              <div class="where">AC Nielsen · Sofia, Bulgaria</div>
             </div>
           </li>
         </ol>
+        <p class="more"><a href="https://www.linkedin.com/in/vladimir-vutov-62aa7917a/" data-goatcounter-click="experience-linkedin">Full experience on LinkedIn ↗</a></p>
       </div>
     </section>
--->
 
     <section id="projects">
       <div class="wrap">
         <h2>Projects</h2>
         <div class="projects">
+
+          <a class="project" href="https://github.com/fisherynwa/ecb-fx-pipeline" data-goatcounter-click="project-ecb-fx">
+            <div class="thumb"><img src="https://raw.githubusercontent.com/fisherynwa/ecb-fx-pipeline/main/figures/dashboard.png" alt="Streamlit dashboard of ECB euro exchange rates" loading="lazy"></div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>ECB Exchange-Rate Pipeline</h3>
+                <span class="repo mono">ecb-fx-pipeline</span>
+              </div>
+              <p>A daily data pipeline for the European Central Bank's euro reference rates, with no
+                database server. Python ingests the raw data into DuckDB, dbt builds and tests
+                bronze → silver → gold layers (daily returns, 20-day volatility, monthly averages),
+                Airflow schedules weekday runs, and a Streamlit dashboard reads the gold layer.
+                Idempotent steps, lineage on every row, and tests that gate what reaches the dashboard.</p>
+              <div class="metric mono">21 unit tests · 10 dbt data tests · CI on GitHub Actions</div>
+              <div class="tags"><span>DuckDB</span><span>dbt</span><span>Airflow</span><span>Streamlit</span><span>Docker</span></div>
+            </div>
+          </a>
 
           <a class="project" href="https://github.com/fisherynwa/paper-search" data-goatcounter-click="project-paper-search">
             <div class="thumb"><img src="https://raw.githubusercontent.com/fisherynwa/paper-search/main/images/demo_compressed.gif" alt="PaperSearch app demo" loading="lazy"></div>
@@ -170,24 +229,6 @@
             </div>
           </a>
 
-
-          <a class="project" href="https://github.com/fisherynwa/ecb-fx-pipeline" data-goatcounter-click="project-ecb-fx">
-            <div class="thumb"><img src="https://raw.githubusercontent.com/fisherynwa/ecb-fx-pipeline/main/figures/dashboard.png" alt="Streamlit dashboard of ECB euro exchange rates" loading="lazy"></div>
-            <div class="project-body">
-              <div class="project-head">
-                <h3>ECB Exchange-Rate Pipeline</h3>
-                <span class="repo mono">ecb-fx-pipeline</span>
-              </div>
-              <p>A daily data pipeline for the European Central Bank's euro reference rates, with no
-                database server. Python ingests the raw data into DuckDB, dbt builds and tests
-                bronze → silver → gold layers (daily returns, 20-day volatility, monthly averages),
-                Airflow schedules weekday runs, and a Streamlit dashboard reads the gold layer.
-                Idempotent steps, lineage on every row, and tests that gate what reaches the dashboard.</p>
-              <div class="metric mono">21 unit tests · 10 dbt data tests · CI on GitHub Actions</div>
-              <div class="tags"><span>DuckDB</span><span>dbt</span><span>Airflow</span><span>Streamlit</span><span>Docker</span></div>
-            </div>
-          </a>
-
           <a class="project" href="https://github.com/fisherynwa/python-rag-data-science" data-goatcounter-click="project-rag">
             <div class="thumb contain"><img src="https://raw.githubusercontent.com/fisherynwa/python-rag-data-science/main/img/chunk_dist.png" alt="Document length distribution used to choose chunk size" loading="lazy"></div>
             <div class="project-body">
@@ -198,12 +239,40 @@
               <p>A fully local RAG assistant for pandas / scikit-learn questions, with Weaviate
                 hybrid search, data-driven chunk sizing, and RAGAS evaluation logged to MLflow,
                 using a separate judge model to avoid self-preference bias.</p>
-              <div class="tags"><span>Weaviate</span><span>RAGAS</span><span>MLflow</span><span>Ollama</span></div>
+              <div class="metric memo"> Weaviate · RAGAS · Ollama
             </div>
           </a>
 
         </div>
         <p class="more"><a href="https://github.com/fisherynwa?tab=repositories">See all repositories →</a></p>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="wrap">
+        <h2> Publications</h2>
+        <ol class="pubs">
+          <li>
+            <a class="pub-title" href="https://doi.org/10.1145/3807503.3819478" data-goatcounter-click="pub-bcb26">Beyond Binning: Resolution-Preserving MS1 Pretraining for Clinical Proteomics Classification</a>
+            <div class="pub-meta">Co-author · <span class="pub-venue">ACM BCB 2026</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://doi.org/10.1002/sim.9761" data-goatcounter-click="pub-sim2023">Multiple multi-sample testing under arbitrary covariance dependency</a>
+            <div class="pub-meta"><strong>V. Vutov</strong>, T. Dickhaus · <span class="pub-venue">Statistics in Medicine, 2023</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://doi.org/10.1186/s12859-023-05402-0" data-goatcounter-click="pub-bmc2023">Supervised topological data analysis for MALDI mass spectrometry imaging applications</a>
+            <div class="pub-meta">G. Klaila, <strong>V. Vutov</strong>, A. Stefanou · <span class="pub-venue">BMC Bioinformatics, 2023</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://doi.org/10.1002/bimj.202100328" data-goatcounter-click="pub-bimj2023">Multiple two-sample testing under arbitrary covariance dependency with an application in imaging mass spectrometry</a>
+            <div class="pub-meta"><strong>V. Vutov</strong>, T. Dickhaus · <span class="pub-venue">Biometrical Journal, 2023</span></div>
+          </li>
+          <li>
+            <a class="pub-title" href="https://arxiv.org/abs/2310.04354" data-goatcounter-click="pub-arxiv2023">Integrating Transformations in Probabilistic Circuits</a>
+            <div class="pub-meta">T. Schierenbeck, <strong>V. Vutov</strong>, T. Dickhaus, M. Beetz · <span class="pub-venue">arXiv preprint, 2023</span></div>
+          </li>
+        </ol>
       </div>
     </section>
 

@@ -45,6 +45,7 @@ nav ul a:hover { color: var(--text); text-decoration: none; }
   font-size: clamp(2.2rem, 7vw, 3.4rem);
   line-height: 1.1; letter-spacing: -0.035em; margin-bottom: 20px;
 }
+.hero .tagline { font-size: clamp(0.95rem, 4.1vw, 1.35rem); font-weight: 600; color: var(--text); opacity: .85; margin: -6px 0 18px; letter-spacing: -0.01em; }
 .hero p { color: var(--muted); font-size: 1.15rem; max-width: 36em; }
 .hero .cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
@@ -119,8 +120,8 @@ section > .wrap > p + p { margin-top: 14px; }
 }
 
 /* Experience timeline */
-.timeline { list-style: none; display: grid; gap: 26px; }
-.timeline li { display: grid; grid-template-columns: 130px 1fr; gap: 20px; }
+.timeline { list-style: none; display: grid; gap: 18px; }
+.timeline li { display: grid; grid-template-columns: 165px 1fr; gap: 20px; }
 .timeline .when { font-size: 13px; color: var(--muted); padding-top: 3px; }
 .timeline .what { font-weight: 600; }
 .timeline .where { color: var(--muted); font-size: 15px; }
@@ -146,6 +147,20 @@ section > .wrap > p + p { margin-top: 14px; }
 .school-detail { color: var(--accent); font-size: 13px; margin-top: 2px; }
 @media (max-width: 620px) { .schools { grid-template-columns: 1fr; } }
 
+/* Publications */
+.pubs { list-style: none; display: grid; gap: 20px; }
+.pub-title { font-weight: 600; color: var(--text); line-height: 1.4; }
+.pub-title:hover { color: var(--accent); text-decoration: none; }
+.pub-meta { color: var(--muted); font-size: 14px; margin-top: 3px; }
+.pub-meta strong { color: var(--text); font-weight: 600; }
+.pub-venue { color: var(--accent); }
+
+/* 404 page */
+.notfound { min-height: 70vh; display: flex; flex-direction: column; justify-content: center; padding: 40px 20px; }
+.notfound .code { font-size: 14px; color: var(--accent); margin-bottom: 12px; }
+.notfound h1 { font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 14px; }
+.notfound p { color: var(--muted); max-width: 32em; margin-bottom: 26px; }
+
 /* Contact */
 .links { list-style: none; display: grid; gap: 10px; }
 .links li { display: flex; gap: 12px; }
@@ -157,7 +172,7 @@ footer { padding: 40px 0 56px; color: var(--muted); font-size: 14px; border-top:
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
   .thumb { height: 150px; }
   nav { gap: 16px; }
-  nav ul { gap: 12px; font-size: 14px; }
+  nav ul { gap: 10px; font-size: 13.5px; }
   .status { border-radius: 14px; }
   .hero { padding: 32px 0 40px; }
   .project-head { flex-direction: column; gap: 2px; }
