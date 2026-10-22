@@ -184,20 +184,25 @@
             </div>
           </a>
 
-          <a class="project" href="https://github.com/fisherynwa/paper-search" data-goatcounter-click="project-paper-search">
-            <div class="thumb"><img src="https://raw.githubusercontent.com/fisherynwa/paper-search/main/images/demo_compressed.gif" alt="PaperSearch app demo" loading="lazy"></div>
+
+          <a class="project" href="https://github.com/fisherynwa/adv-rag-benchmark" data-goatcounter-click="project-adv-rag">
+            <div class="thumb contain"><img src="https://raw.githubusercontent.com/fisherynwa/adv-rag-benchmark/main/results/accuracy_by_system.png" alt="Accuracy by retrieval system, with tokens read per question" loading="lazy"></div>
             <div class="project-body">
               <div class="project-head">
-                <h3>Paper Search</h3>
-                <span class="repo mono">paper-search</span>
+                <h3>Sentence Window vs. Auto-Merging RAG</h3>
+                <span class="repo mono">adv-rag-benchmark</span>
               </div>
-              <p>Hybrid semantic search and Q&amp;A over research papers. Combines FAISS dense
-                retrieval with BM25 via reciprocal rank fusion, enriches chunks with LLM-generated
-                context, answers with a local Qwen model, and scores answers with a validator pass.
-                Includes a Streamlit UI and a systematic benchmark suite.</p>
-              <div class="tags"><span>FAISS</span><span>BM25</span><span>Ollama</span><span>Streamlit</span><span>Hydra</span></div>
+              <p>A benchmark of LlamaIndex retrieval methods (sentence window, auto-merging, basic RAG,
+                and a full-context reference) on a purpose-built document where the correct answer and its
+                exact supporting sentence are known for every question. Separates retrieval failures from
+                generation failures, checks hallucinations without an LLM, and confirms reproducibility with
+                a test-retest on a second machine.</p>
+              <div class="metric mono">Sentence window 0.93 vs. auto-merging 0.79 correct · 154 questions</div>
+              <div class="tags"><span>LlamaIndex</span><span>Ollama</span><span>RAG evaluation</span><span>pytest</span></div>
             </div>
           </a>
+
+
 
           <a class="project" href="https://github.com/fisherynwa/ViT-histo" data-goatcounter-click="project-vit-histo">
             <div class="thumb contain"><img src="https://raw.githubusercontent.com/fisherynwa/ViT-histo/main/figures/label1_samples.png" alt="Sample tumour tissue patches" loading="lazy"></div>
@@ -212,6 +217,21 @@
                 test set.</p>
               <div class="metric mono">Test ROC-AUC 0.96 · Brier 0.070</div>
               <div class="tags"><span>PyTorch</span><span>Transformers</span><span>W&amp;B</span><span>Hydra</span></div>
+            </div>
+          </a>
+          
+          <a class="project" href="https://github.com/fisherynwa/paper-search" data-goatcounter-click="project-paper-search">
+            <div class="thumb"><img src="https://raw.githubusercontent.com/fisherynwa/paper-search/main/images/demo_compressed.gif" alt="PaperSearch app demo" loading="lazy"></div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Paper Search</h3>
+                <span class="repo mono">paper-search</span>
+              </div>
+              <p>Hybrid semantic search and Q&amp;A over research papers. Combines FAISS dense
+                retrieval with BM25 via reciprocal rank fusion, enriches chunks with LLM-generated
+                context, answers with a local Qwen model, and scores answers with a validator pass.
+                Includes a Streamlit UI and a systematic benchmark suite.</p>
+              <div class="tags"><span>FAISS</span><span>BM25</span><span>Ollama</span><span>Streamlit</span><span>Hydra</span></div>
             </div>
           </a>
 
